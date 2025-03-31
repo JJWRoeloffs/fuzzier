@@ -43,7 +43,7 @@ import com.mituuz.fuzzier.entities.FuzzyMatchContainer
 import com.mituuz.fuzzier.settings.FuzzierSettingsService
 import com.mituuz.fuzzier.util.FuzzierUtil
 import org.apache.commons.lang3.StringUtils
-import java.awt.Dimension
+import com.intellij.util.ui.JBUI
 import java.util.*
 import java.util.concurrent.Future
 import javax.swing.DefaultListModel
@@ -84,8 +84,8 @@ class TestBenchComponent : JPanel() {
                 GridConstraints.FILL_BOTH,
                 GridConstraints.SIZEPOLICY_CAN_SHRINK or GridConstraints.SIZEPOLICY_WANT_GROW,
                 GridConstraints.SIZEPOLICY_CAN_SHRINK or GridConstraints.SIZEPOLICY_WANT_GROW,
-                Dimension(-1, 300),
-                Dimension(-1, -1),
+                JBUI.size(-1, 300),
+                JBUI.size(-1, -1),
                 null,
                 0,
                 false
@@ -103,7 +103,7 @@ class TestBenchComponent : JPanel() {
                 GridConstraints.SIZEPOLICY_WANT_GROW,
                 GridConstraints.SIZEPOLICY_FIXED,
                 null,
-                Dimension(-1, -1),
+                JBUI.size(-1, -1),
                 null,
                 0,
                 false

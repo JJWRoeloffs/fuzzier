@@ -26,11 +26,11 @@ package com.mituuz.fuzzier.components
 import com.intellij.ui.components.JBScrollPane
 import com.intellij.uiDesigner.core.GridConstraints
 import com.intellij.uiDesigner.core.GridLayoutManager
-import java.awt.Dimension
+import com.intellij.util.ui.JBUI
 
 class SimpleFinderComponent() : FuzzyComponent() {
     init {
-        this.preferredSize = Dimension(700, 400)
+        this.preferredSize = JBUI.size(700, 400)
         layout = GridLayoutManager(2, 1)
         val scrollPane = JBScrollPane()
         scrollPane.setViewportView(fileList)
@@ -46,8 +46,8 @@ class SimpleFinderComponent() : FuzzyComponent() {
                 GridConstraints.FILL_BOTH,
                 GridConstraints.SIZEPOLICY_CAN_SHRINK or GridConstraints.SIZEPOLICY_WANT_GROW,
                 GridConstraints.SIZEPOLICY_CAN_SHRINK or GridConstraints.SIZEPOLICY_WANT_GROW,
-                Dimension(-1, 300),
-                Dimension(-1, -1),
+                JBUI.size(-1, 300),
+                JBUI.size(-1, -1),
                 null,
                 0,
                 false
@@ -65,7 +65,7 @@ class SimpleFinderComponent() : FuzzyComponent() {
                 GridConstraints.SIZEPOLICY_WANT_GROW,
                 GridConstraints.SIZEPOLICY_FIXED,
                 null,
-                Dimension(-1, -1),
+                JBUI.size(-1, -1),
                 null,
                 0,
                 false

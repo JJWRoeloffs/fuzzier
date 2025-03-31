@@ -105,7 +105,7 @@ class FuzzierUtil {
         var minimumScore: Int? = null
         listModel.elements().toList().forEach {
             if (it is FuzzyMatchContainer) {
-                if (minimumScore == null || it.getScore() > minimumScore) {
+                if (minimumScore == null || it.getScore() > minimumScore!!) {
                     priorityQueue.add(it)
                     if (priorityQueue.size > listLimit) {
                         priorityQueue.remove()
