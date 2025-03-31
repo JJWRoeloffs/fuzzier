@@ -38,7 +38,6 @@ import com.mituuz.fuzzier.settings.FuzzierGlobalSettingsService.SearchPosition.L
 import com.mituuz.fuzzier.settings.FuzzierGlobalSettingsService.SearchPosition.RIGHT
 import com.mituuz.fuzzier.settings.FuzzierGlobalSettingsService.SearchPosition.TOP
 import java.awt.BorderLayout
-import java.awt.Dimension
 import javax.swing.JPanel
 import javax.swing.JSplitPane
 
@@ -55,7 +54,7 @@ class FuzzyFinderComponent(project: Project) : FuzzyComponent() {
         previewPane.fileType = PlainTextFileType.INSTANCE
         previewPane.isViewer = true
 
-        splitPane.preferredSize = Dimension(settingsState.defaultPopupWidth, settingsState.defaultPopupHeight)
+        splitPane.preferredSize = JBUI.size(settingsState.defaultPopupWidth, settingsState.defaultPopupHeight)
 
         fuzzyPanel.layout = GridLayoutManager(1, 1, JBUI.emptyInsets(), -1, -1)
         val searchPanel = JPanel()
@@ -148,7 +147,7 @@ class FuzzyFinderComponent(project: Project) : FuzzyComponent() {
             GridConstraints.SIZEPOLICY_CAN_SHRINK or GridConstraints.SIZEPOLICY_WANT_GROW,
             sizePolicy,
             null,
-            Dimension(-1, -1),
+            JBUI.size(-1, -1),
             null,
             0,
             false
